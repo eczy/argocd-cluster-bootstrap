@@ -22,7 +22,7 @@ spec:
       - name: "resources.requests.memory"
         value: "1Gi"
       - name: "replicas"
-        value: "4"
+        value: "1"
   destination:
     server: https://kubernetes.default.svc
     namespace: argo-artifacts
