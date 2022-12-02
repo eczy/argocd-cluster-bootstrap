@@ -18,6 +18,9 @@ spec:
         value: "LoadBalancer"
       - name: "fullnameOverride"
         value: "argo-artifacts"
+      # recommended at least 16Gi but we are running on limited hardware
+      - name: "resources.requests.memory"
+        value: "1Gi"
   destination:
     server: https://kubernetes.default.svc
     namespace: argo-artifacts
