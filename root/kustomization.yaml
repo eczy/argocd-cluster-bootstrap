@@ -3,6 +3,7 @@ metadata:
 
 resources:
 - services/argo-workflows.yaml
+- services/argo-artifacts.yaml
 - services/argo-rollouts.yaml
 - services/argo-events.yaml
 - services/gitea.yaml
