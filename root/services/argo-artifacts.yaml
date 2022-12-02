@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: minio
+  namespace: argo-artifacts
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  source:
+    chart: minio
+    repoURL: https://charts.min.io/
+    targetRevision: 5.0.1
+    helm:
+      releaseName: argo-artifacts
+      parameters:
+      - name: "service.type"
+        value: "LoadBalancer"
+      - name: "fullnameOverride"
+        value: "argo-artifacts"
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argo-artifacts
