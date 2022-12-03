@@ -28,10 +28,10 @@ spec:
         value: "8Gi"
       - name: "mode"
         value: "standalone"
-      - name: "ingress.enabled"
+      - name: "consoleIngress.enabled"
         value: "true"
-      - name: "ingress.hosts[0]"
-        value: "argo-artifacts.home.lan"
+      - name: "consoleIngress.hosts[0]"
+        value: "console.argo-artifacts.home.lan"
 
 
   destination:
