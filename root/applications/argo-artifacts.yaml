@@ -28,6 +28,11 @@ spec:
         value: "8Gi"
       - name: "mode"
         value: "standalone"
+      - name: "ingress.enabled"
+        value: "true"
+      - name: "ingress.hosts[0]"
+        value: "argo-artifacts.home.lan"
+
 
   destination:
     server: https://kubernetes.default.svc
