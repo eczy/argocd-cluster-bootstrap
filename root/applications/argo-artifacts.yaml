@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: argo-artifacts
+  name: minio
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
@@ -14,10 +14,10 @@ spec:
     helm:
       releaseName: argo-artifacts
       parameters:
-      - name: "service.type"
-        value: "LoadBalancer"
-      - name: "fullnameOverride"
-        value: "argo-artifacts"
+      # - name: "service.type"
+      #   value: "LoadBalancer"
+      # - name: "fullnameOverride"
+      #   value: "argo-artifacts"
       # recommended at least 16Gi but we are running on limited hardware
       - name: "resources.requests.memory"
         value: "1Gi"
@@ -28,12 +28,14 @@ spec:
         value: "8Gi"
       - name: "mode"
         value: "standalone"
+      - name: "ingress.enabled"
+        value: "true"
+      - name: "ingress.hosts[0]"
+        value: "minio.home.lan"
       - name: "consoleIngress.enabled"
         value: "true"
       - name: "consoleIngress.hosts[0]"
-        value: "console.argo-artifacts.home.lan"
-
-
+        value: "console.minio.home.lan"
   destination:
     server: https://kubernetes.default.svc
-    namespace: argo-artifacts
+    namespace: minio
