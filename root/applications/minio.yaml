@@ -36,6 +36,10 @@ spec:
         value: "true"
       - name: "consoleIngress.hosts[0]"
         value: "console.minio.home.lan"
+      - name: "metrics.serviceMonitor.enabled"
+        value: "true"
+      - name: "buckets[0].name"
+        value: "argo-artifacts"
   destination:
     server: https://kubernetes.default.svc
     namespace: minio

@@ -2,8 +2,8 @@ metadata:
   name: bootstrap
 
 resources:
+- applications/minio.yaml
 - applications/argo-workflows.yaml
-- applications/argo-artifacts.yaml
 - applications/argo-rollouts.yaml
 - applications/argo-events.yaml
 - applications/gitea.yaml
