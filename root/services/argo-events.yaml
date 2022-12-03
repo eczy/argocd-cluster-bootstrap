@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: https://github.com/eczy/homelab
     targetRevision: init
-    path: bootstrap/argo-events
+    path: argo-events
   destination:
     server: https://kubernetes.default.svc
     namespace: argo-events
