@@ -8,8 +8,8 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/eczy/homelab
-    targetRevision: init
+    repoURL: https://github.com/eczy/argocd-cluster-bootstrap
+    targetRevision: master
     path: argo-workflows
   destination:
     server: https://kubernetes.default.svc
