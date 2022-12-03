@@ -22,10 +22,11 @@ spec:
       - name: "resources.requests.memory"
         value: "1Gi"
       - name: "replicas"
-        value: "4"
+        value: "1"
       # should be much larger but we are running on limited hardware
       - name: "persistence.size"
         value: "8Gi"
+      - mode: "standalone"
 
   destination:
     server: https://kubernetes.default.svc
