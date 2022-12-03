@@ -2,11 +2,11 @@ metadata:
   name: bootstrap
 
 resources:
-- services/argo-workflows.yaml
-- services/argo-artifacts.yaml
-- services/argo-rollouts.yaml
-- services/argo-events.yaml
-- services/gitea.yaml
+- applications/argo-workflows.yaml
+- applications/argo-artifacts.yaml
+- applications/argo-rollouts.yaml
+- applications/argo-events.yaml
+- applications/gitea.yaml
 
 patches:
 - path: patches/patch-application-common.yaml
