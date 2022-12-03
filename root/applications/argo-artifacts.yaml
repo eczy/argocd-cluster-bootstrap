@@ -12,7 +12,7 @@ spec:
     repoURL: https://charts.min.io/
     targetRevision: 5.0.1
     helm:
-      releaseName: argo-artifacts
+      releaseName: minio
       parameters:
       # - name: "service.type"
       #   value: "LoadBalancer"
